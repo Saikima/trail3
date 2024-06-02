@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Talkers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222; /* Black background */
+      color: #33b5e5; /* Light blue text */
+      text-align: center;
+      margin: 0;
+    }
+    
+    h1 {
+      font-size: 3em;
+      margin-top: 50px;
+    }
+    
+    button {
+      background-color: #33b5e5; /* Light blue button */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Talkers</h1>
+  <p>Choose your preference:</p>
+  <button id="lowBtn">Low</button>
+  <button id="midBtn">Mid</button>
+  <button id="highBtn">High</button>
+  
+  <script>
+    // Function to redirect with selected option
+    function redirectOption(choice) {
+      window.location.href = "new_page.html?choice=" + choice;
+    }
+    
+    // Add click events for buttons
+    document.getElementById("lowBtn").addEventListener("click", function() {
+      redirectOption("low");
+    });
+    
+    document.getElementById("midBtn").addEventListener("click", function() {
+      redirectOption("mid");
+    });
+    
+    document.getElementById("highBtn").addEventListener("click", function() {
+      redirectOption("high");
+    });
+  </script>
+</body>
+</html>
